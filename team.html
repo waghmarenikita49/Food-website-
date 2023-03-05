@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheesy Fast Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="short icon" type="image/png" href="LOGO.png">
+	<!--font awesomecdn link-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+
+    <div id="bar">
+		<div id="home"><a href="index.html"><label>HOME</label></a></div>
+		<div id="menu"><a href="menu.html"><label>MENU</label></a></div>
+		<div id="order"><a href="order_online.html"><label>ORDER ONLINE</label></a></div>
+		<div id="team" style="color: red; font-family: calibri; font-size: 18pt; text-align: center;"><label>TEAM</label></div>	
+		<div id="contact"><a href="contact_us.html"><label>CONTACT US</label></a></div>
+		<div id="sign"><a href="sign_up.html"><label>SIGN UP</label></a></div>
+	</div>
+
+    <div id="login">
+        <img id="logo" src="LOGO.png">
+        <div id="login_form">
+            <p style="text-align: center;font-size: 20pt; font-style: italic;">Some Feedback</p>
+		</div>
+		<div class="container">
+			<div class="slide-container active">
+			<div class="slide">
+				<i class="fas fa-quote-right icon"></i>
+				<div class="user">
+					<img src="1.jpg" alt="">
+					<div class="user-info">
+						<h3>john deo</h3>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora minus consectetur suscipit adipisci quo ut dolorem, sed aliquid voluptatibus quidem nobis eius explicabo deserunt temporibus quae qui reprehenderit aspernatur soluta!</p>
+			</div>
+			</div>
+			<div class="slide-container ">
+				<div class="slide">
+					<i class="fas fa-quote-right icon"></i>
+					<div class="user">
+						<img src="2.jpg" alt="">
+						<div class="user-info">
+							<h3>john deo</h3>
+							<div class="stars">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora minus consectetur suscipit adipisci quo ut dolorem, sed aliquid voluptatibus quidem nobis eius explicabo deserunt temporibus quae qui reprehenderit aspernatur soluta!</p>
+				</div>
+				</div>
+				<div class="slide-container ">
+					<div class="slide">
+						<i class="fas fa-quote-right icon"></i>
+						<div class="user">
+							<img src="3.jpg" alt="">
+							<div class="user-info">
+								<h3>john deo</h3>
+								<div class="stars">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="far fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora minus consectetur suscipit adipisci quo ut dolorem, sed aliquid voluptatibus quidem nobis eius explicabo deserunt temporibus quae qui reprehenderit aspernatur soluta!</p>
+					</div>
+					</div>
+		</div>
+		<div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+		<div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    </div>
+ 
+
+     
+
+        
+		
+	<div id="team1">
+		<h1 style="color:#ff9800; font-family: calibri; text-align: center; font-size: 28pt; text-transform: uppercase;">Our Chefs</h1>
+		<div id="t1_deal">
+			<img id="t1_pic" src="12.jpg">
+			<div id="team1_info">
+				 <h3>raj himachal</h3>
+				 <p>head chef</p>
+			</div>
+		</div>
+		
+		<div id="t2_deal">
+			<img id="t2_pic" src="22.jpg">
+			<div id="team2_info">
+				<h3>raj himachal</h3>
+				<p>head chef</p>
+		   </div>
+		</div>
+		<div id="t3_deal">
+			<img id="t3_pic" src="33.jpg">
+			<div id="team3_info">
+				<h3>raj himachal</h3>
+				<p>head chef</p>
+		   </div>
+		</div>
+	</div>
+
+
+	<script>
+		let slides = document.querySelectorAll('.slide-container');
+		let index=0;
+		function next()
+		{
+			slides[index].classList.remove('active');
+			index = (index + 1) % slides.length;
+			slides[index].classList.add('active');
+		}
+		function prev()
+		{
+			slides[index].classList.remove('active');
+			index = (index - 1 + slides.length) % slides.length;
+			slides[index].classList.add('active');
+		}
+	</script>
+</body>
+</html>
